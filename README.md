@@ -2,71 +2,67 @@
 Heart disease prediction using Decision Tree classification. Includes EDA, preprocessing, 80/20 evaluation, accuracy, confusion matrix insights, tree depth analysis, and manual tuning with Gini, Entropy, and min_samples_leaf.
 
 ````
-# Heart Disease Prediction using Decision Tree
+# Decision-Tree-Heart-Disease-Classifier
 
-This project uses a **Decision Tree Machine Learning model** to predict whether a patient has heart disease (**Disease / No Disease**) using real medical data.
-
----
-
-## 📌 Project Overview
-- Model used: **Decision Tree Classifier**
-- Task: **Binary Classification (0 = No Disease, 1 = Disease)**
-- Dataset: 205+ patient health records
-- Best model result:  
-  - **Training Accuracy: 100%**
-  - **Testing Accuracy: ~98.5%**
-  - This shows the model learned medical patterns well and predicts unseen data reliably.
+A simple ML project that predicts heart disease using a Decision Tree classifier trained on 205+ patient records.
 
 ---
 
-## 📊 Notebook Outcomes Summary
+## Project Overview
+- **Model used:** Decision Tree Classifier
+- **Task:** Binary Classification (0 = No Disease, 1 = Disease)
+- **Best model (max_depth=None):**
+  - Train Accuracy: **100%**
+  - Test Accuracy: **98.5%**
+- Model shows strong learning and reliable prediction on unseen patient data.
+
+---
+
+## Notebook Outcomes
 | Parameter | Result |
 |---|---|
-| Best `max_depth` | **None (Deep Tree)** |
-| Train Accuracy | **1.0 (100%)** |
-| Test Accuracy | **0.985 (98.5%)** |
-| Precision (Class 0) | **0.97** |
-| Recall (Class 0) | **1.00** |
-| F1 (Class 0) | **0.99** |
-| Precision (Class 1) | **1.00** |
-| Recall (Class 1) | **0.97** |
-| F1 (Class 1) | **0.99** |
-| Fit Analysis | **Good Fit, Mild Overfitting but Generalizes Strongly** |
-
-🔍 *Interpretation:*  
-The model predicts both classes very well. **Class 0 has perfect recall**, meaning all healthy patients were identified correctly. **Class 1 also performs strong**, missing only a few cases.
+| Best max_depth | None (Deep Tree) |
+| Train Accuracy | 1.0 |
+| Test Accuracy | 0.985 |
+| Precision (0) | 0.97 |
+| Recall (0) | 1.00 |
+| F1 (0) | 0.99 |
+| Precision (1) | 1.00 |
+| Recall (1) | 0.97 |
+| F1 (1) | 0.99 |
+| Fit Analysis | Good Fit, Mild Overfitting, Strong Generalization |
 
 ---
 
-## 🧠 How Decision Tree Makes Predictions (Simple Example)
-The tree learns rules like:
-- **Is blood pressure high?**
-- **Is sugar level abnormal?**
-- **Is heart rate low or high?**
+## Depth Analysis (Manual Experiment)
+| Model | max_depth | Train Acc | Test Acc |
+|---|---|---|---|
+| 1 | 2 | 0.769 | 0.678 |
+| 2 | 5 | 0.929 | 0.843 |
+| 3 | None | 1.0 | 0.985 |
 
-Using these conditions, it moves through the tree and predicts:
-```
-New Patient Record → Disease (1) or No Disease (0)
-```
-
----
-
-## ⚙️ Hyperparameter Tuning Done
-- Compared **Gini vs Entropy** split criteria
-- Tried **min_samples_leaf (2 & 5)** manually to reduce noise
-- Analyzed tree depth impact to avoid underfitting
-- Visualized the best performing tree with features and class labels
+- **Shallow tree (2):** Too simple, misses multi-factor disease logic → underfits.
+- **Medium tree (5):** Learns better but test score moderate → balanced learning.
+- **Deep tree (None):** Best test accuracy, learned most patterns but created very specific rules → mild overfit risk.
 
 ---
 
-## ✨ Conclusion
-Decision Trees are fast, easy to interpret, and work well for medical datasets. The best model here shows high test accuracy and strong classification scores, making it reliable for heart disease prediction tasks.
+## Why Decision Tree Works on This Data
+- Accepts both numeric and category features
+- Finds important medical signals by splitting
+- No heavy computation needed
+- Decisions can be traced like doctor questions
+
+**Example rule learned by model:**  
+If **heart rate < 120** and **sugar level high** → more chance of disease.
 
 ---
 
-## 🚀 How to Use
-1. Open the notebook
-2. Run all cells from top to bottom
-3. The model will train and predict results
-4. You can also test with new patient values using `model.predict()`
+## Conclusion
+The model predicts heart disease effectively using learned decision rules. Controlling depth and leaf size improves stability. Multi-tree methods like Random Forest and Boosting use Decision Trees because combining trees reduces errors and gives better real-world results.
+
+---
+
+**Author:** Arutla Rakshith (Fresher, B.Tech CSE – AI & Data Science)
+
 
