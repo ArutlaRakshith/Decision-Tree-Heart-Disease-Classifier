@@ -1,7 +1,7 @@
 # Decision-Tree-Heart-Disease-Classifier
 Heart disease prediction using Decision Tree classification. Includes EDA, preprocessing, 80/20 evaluation, accuracy, confusion matrix insights, tree depth analysis, and manual tuning with Gini, Entropy, and min_samples_leaf.
 
-````
+
 # Decision-Tree-Heart-Disease-Classifier
 
 A simple ML project that predicts heart disease using a Decision Tree classifier trained on 205+ patient records.
@@ -64,5 +64,17 @@ The model predicts heart disease effectively using learned decision rules. Contr
 ---
 
 **Author:** Arutla Rakshith (Fresher, B.Tech CSE – AI & Data Science)
+```
 
+---
 
+### How to paste correctly in GitHub Desktop:
+1. Create a new file → name it `README.md`
+2. Copy all the text above (from `#` to end)
+3. Paste into the file → Commit → Push
+
+---
+
+If you open the file on GitHub, it will render normally, but the above text is the **exact raw source**.
+
+Try now — it will work. If you want, I can also give a shorter or more technical version later.
