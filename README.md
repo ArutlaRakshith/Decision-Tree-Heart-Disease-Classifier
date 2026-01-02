@@ -61,20 +61,4 @@ If **heart rate < 120** and **sugar level high** → more chance of disease.
 ## Conclusion
 The model predicts heart disease effectively using learned decision rules. Controlling depth and leaf size improves stability. Multi-tree methods like Random Forest and Boosting use Decision Trees because combining trees reduces errors and gives better real-world results.
 
----
 
-**Author:** Arutla Rakshith (Fresher, B.Tech CSE – AI & Data Science)
-```
-
----
-
-### How to paste correctly in GitHub Desktop:
-1. Create a new file → name it `README.md`
-2. Copy all the text above (from `#` to end)
-3. Paste into the file → Commit → Push
-
----
-
-If you open the file on GitHub, it will render normally, but the above text is the **exact raw source**.
-
-Try now — it will work. If you want, I can also give a shorter or more technical version later.
